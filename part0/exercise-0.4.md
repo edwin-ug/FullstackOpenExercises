@@ -9,17 +9,6 @@ sequenceDiagram
     Note left of server: Server pushes the new note to the notes array.
     server-->>browser: HTTP 302 Found (Redirect to /notes)
     deactivate server
-    
-sequenceDiagram
-    participant browser
-    participant server
-
-    Note right of browser: User types a note and clicks Save. Form data is sent.
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate server
-    Note left of server: Server pushes the new note to the notes array.
-    server-->>browser: HTTP 302 Found (Redirect to /notes)
-    deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
